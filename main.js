@@ -14,6 +14,7 @@ function populateVoices() {
         .join('');
 }
 
+
 function setVoice() {
     msg.voice = voices.find(voice => voice.name === this.value);
     toggle();
@@ -37,3 +38,8 @@ voicesDropdown.addEventListener('change', setVoice);
 options.forEach(option => option.addEventListener('change', setOption));
 speakButton.addEventListener('click', toggle);
 stopButton.addEventListener('click', () => toggle(false));
+stopButton.addEventListener('click', () => {
+    document.getElementById("txtBtn").value = "";
+    console.log("deleted")
+    }
+)
